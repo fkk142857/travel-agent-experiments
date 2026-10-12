@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>小坤 · 旅游 Agent 实验台</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css?v={%V%}" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-head">
+      <div class="logo">
+        <span class="logo-mark">🌴</span>
+        <div>
+          <h1>小坤</h1>
+          <p>旅游 Agent 实验台</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item active" data-view="chat">
+        <span class="nav-no">✦</span>
+        <span class="nav-body"><span class="nav-title">自由问答</span>
+        <span class="nav-badge">RAG</span></span>
+      </button>
+    </nav>
+
+    <div class="side-foot">
+      <div class="model-badge"><span class="dot"></span><span id="modelName">deepseek-chat</span></div>
+      <p class="foot-note">15 个实验全部基于 01.py 实现</p>
+      <p class="foot-note">快捷键：<b>Esc ×2</b> 清空当前对话</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="btn-menu" id="btnMenu" aria-label="菜单">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="topbar-title" id="topTitle">自由问答</div>
+      <div class="topbar-sub" id="topSub"></div>
+      <button class="btn-logout" id="btnLogout" title="退出登录">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        <span>退出</span>
+      </button>
+      <span class="status" id="status"><span class="dot"></span>就绪</span>
+    </header>
+
+    <div class="stage" id="stage"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/static/app.js?v={%V%}"></script>
+</body>
+</html>
