@@ -50,19 +50,6 @@ from pydantic import BaseModel, ValidationError
 #把.env里的配置"读进内存"
 dotenv.load_dotenv(dotenv.find_dotenv())
 
-#★ 以下是已删除的 Azure 配置段 ★
-#原文曾在这里读取 AZURE_AI_PROJECT_ENDPOINT / AZURE_AI_MODEL_DEPLOYMENT_NAME 并创建
-#一个 Azure 连接器。因为本机没有配置 Azure 环境变量,那段会直接 raise ValueError 让
-#整个脚本一启动就崩,所以整段删除。以后要用 Azure 时,把下面几行取消注释即可:
-#
-#   endpoint = os.getenv("AZURE_AI_PROJECT_ENDPOINT")
-#   deployment_name = os.getenv("AZURE_AI_MODEL_DEPLOYMENT_NAME")
-#   azure_provider = OpenAIChatCompletionClient(
-#       model=deployment_name,
-#       base_url=endpoint,
-#       api_key=os.getenv("AZURE_AI_API_KEY"),
-#   )
-
 #DeepSeek 的 API 密钥(在你自己的 .env 里,不会进 git)
 api_key = os.getenv("DEEPSEEK_API_KEY")
 #DeepSeek 的接口地址
